@@ -1,26 +1,26 @@
 import mongoose from "mongoose";
-import Room from "./Roommodel.js";
 
-const MessageSchema = new mongoose.Schema(
+const messageSchema = new mongoose.Schema(
   {
     sender: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
-
-    message: {
+    content: {
       type: String,
       required: true,
     },
-    roomId: {
+    room: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
       ref: "Room",
+      required: true,
     },
   },
   { timestamps: true }
 );
 
-const Message = mongoose.model("Message", MessageSchema);
+// ✅ Prevent OverwriteModelError
+const Message = mongoose.models.Message || mongoose.model("Message", messageSchema);
+
 export default Message;
