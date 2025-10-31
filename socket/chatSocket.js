@@ -1,7 +1,7 @@
        import jwt from "jsonwebtoken";
     import mongoose from "mongoose";
     import User from "../Models/usermodel.js";
-    import Message from "../Models/messagemodel.js";
+    import Message from "../Models/Messagemodel.js";
     import chatRoom from "../Models/Roommodel.js";
 
     export const chatSocket = (io) => {

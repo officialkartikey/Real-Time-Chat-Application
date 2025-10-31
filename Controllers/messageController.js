@@ -1,6 +1,6 @@
 import chatRoom from "../Models/Roommodel.js";
 import User from "../Models/usermodel.js";
-import Messages from "../models/messagemodel.js";
+import Messages from "../Models/Messagemodel.js";
 
 export const getMessagesByRoom = async (req, res) => {
     try {

@@ -3,7 +3,7 @@ import {createRoom, getRooms} from "../Controllers/roomController.js";
 import protect from "../Middlewares/authmiddleware.js";
 import { getMessagesByRoom } from "../Controllers/messageController.js";
 import chatRoom from "../Models/Roommodel.js";
-import Message from "../Models/messagemodel.js";
+import Message from "../Models/Messagemodel.js";
 
 const router = express.Router();
 
